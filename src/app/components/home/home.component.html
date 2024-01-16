@@ -1,0 +1,61 @@
+<div class="container mt-4">
+  <form>
+    <!-- Informazioni personali del paziente -->
+    <h2>Informazioni Paziente</h2>
+    <div>
+      <label for="nome">Nome e Cognome:</label>
+      <input type="text" id="nome" name="nome" [(ngModel)]="nome" required />
+    </div>
+
+    <div>
+      <label for="dataNascita">Età:</label>
+      <input
+        type="number"
+        id="dataNascita"
+        name="eta"
+        [(ngModel)]="eta"
+        required
+      />
+    </div>
+
+    <!-- Informazioni sulla salute del paziente -->
+    <h2>Informazioni sulla Salute</h2>
+    <div>
+      <label for="altezza">Altezza (cm):</label>
+      <input type="number" id="altezza" name="height" [(ngModel)]="height" />
+    </div>
+
+    <div>
+      <label for="peso">Peso (kg):</label>
+      <input type="number" id="peso" name="peso" [(ngModel)]="peso" />
+    </div>
+
+    <div>
+      <label for="condizioni">Condizioni Cliniche:</label>
+      <textarea
+        id="condizioniCliniche"
+        name="condizioniCliniche"
+        [(ngModel)]="condizioni"
+      ></textarea>
+    </div>
+
+    <!-- Informazioni sul trattamento fisioterapico -->
+    <h2>Trattamento Fisioterapico</h2>
+    <div>
+      <label for="diagnosi">Diagnosi:</label>
+      <textarea id="diagnosi" name="diagnosi" [(ngModel)]="diagnosi"></textarea>
+    </div>
+
+    <div>
+      <label for="obiettiviTrattamento">Obiettivi del Trattamento:</label>
+      <textarea
+        id="obiettiviTrattamento"
+        name="obiettiviTrattamento"
+        [(ngModel)]="obbiettivo"
+      ></textarea>
+    </div>
+
+    <!-- Pulsante di invio del form -->
+    <button type="submit" (click)="addPazienti()">Salva Scheda Paziente</button>
+  </form>
+</div>
